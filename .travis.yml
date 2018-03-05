@@ -1,7 +1,5 @@
 language: objective-c
 osx_image: xcode9.2
-xcode_project: Vifra.xcodeproj
-xcode_scheme: Vifra
 
 script:
-- xctool -project Vifra.xcodeproj -scheme Vifra -configuration Release
+- xcodebuild -project Vifra.xcodeproj -scheme Vifra -configuration Release
