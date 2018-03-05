@@ -28,3 +28,6 @@ Last but not least you should indicate when you are done with the actuator and c
 - Add watchOS support
 
 [//]: # (Donations: ETH, XMR, BTC, LTC welcome.)
+
+## License
+Vifra is available under the MIT license. See the [LICENSE](./LICENSE) file for more info.
