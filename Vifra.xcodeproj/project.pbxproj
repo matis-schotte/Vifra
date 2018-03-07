@@ -85,6 +85,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE893B78204A047500BC1E21 /* Build configuration list for PBXNativeTarget "Vifra" */;
 			buildPhases = (
+				CE893BAC204FCF2B00BC1E21 /* Run SwiftLint */,
 				CE893B6B204A047500BC1E21 /* Sources */,
 				CE893B6C204A047500BC1E21 /* Frameworks */,
 				CE893B6D204A047500BC1E21 /* Headers */,
@@ -141,6 +142,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE893BAC204FCF2B00BC1E21 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE893B6B204A047500BC1E21 /* Sources */ = {
