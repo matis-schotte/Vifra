@@ -9,7 +9,8 @@
 import IOKit
 import os.log
 
-/// Vifra is a framework for macOS, iOS and WatchKit that provides simplified access to the device actuator to provide haptic feedback through the taptic engine.
+/// Vifra is a framework for macOS, iOS and WatchKit that provides simplified access
+/// to the device actuator to provide haptic feedback through the taptic engine.
 public enum Vifra {
     private static let multitouchActuatorDeviceId: UInt64 = 0x200000001000000
     private static var actuatorReference: AnyObject?
