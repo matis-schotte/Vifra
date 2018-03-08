@@ -1,4 +1,8 @@
-warning_threshold: 0
+disabled_rules:
+  - trailing_whitespace
+
+opt_in_rules:
+  - file_header
 
 file_header:
   required_pattern: |
