@@ -12,7 +12,6 @@ import os.log
 /// Vifra is a framework for macOS, iOS and WatchKit that provides simplified access
 /// to the device actuator to provide haptic feedback through the taptic engine.
 public enum Vifra {
-    
     /// <#Description#>
     public struct ActuatorParameters {
         /// <#Description#>
@@ -23,7 +22,7 @@ public enum Vifra {
         let arg3: Float32
     }
     
-    private static let multitouchActuatorDeviceId: UInt64 = 0x200000001000000
+    private static let multitouchActuatorDeviceId: UInt64 = 0x200_0000_0100_0000
     private static var actuatorReference: AnyObject?
     
     /// Initializes Vifra by opening the actuator device.
@@ -80,6 +79,7 @@ public enum Vifra {
             return false
         }
         
-        return kIOReturnSuccess == MTActuatorActuate(device, actuatonId, parameters.arg1, parameters.arg2, parameters.arg3)
+        let result = MTActuatorActuate(device, actuatonId, parameters.arg1, parameters.arg2, parameters.arg3)
+        return result == kIOReturnSuccess
     }
 }

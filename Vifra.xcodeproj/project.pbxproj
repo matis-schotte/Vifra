@@ -85,6 +85,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE893B78204A047500BC1E21 /* Build configuration list for PBXNativeTarget "Vifra" */;
 			buildPhases = (
+				CE893BAD2053D65F00BC1E21 /* Run SwiftFormat */,
 				CE893BAC204FCF2B00BC1E21 /* Run SwiftLint */,
 				CE893B6B204A047500BC1E21 /* Sources */,
 				CE893B6C204A047500BC1E21 /* Frameworks */,
@@ -158,6 +159,20 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint --strict\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 			showEnvVarsInLog = 0;
+		};
+		CE893BAD2053D65F00BC1E21 /* Run SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftFormat";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\nswiftformat . --trimwhitespace nonblank-lines\nelse\necho \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
