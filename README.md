@@ -1,6 +1,7 @@
 # Vifra
 
 [![Build Status](https://travis-ci.org/matis-schotte/Vifra.svg?branch=develop)](https://travis-ci.org/matis-schotte/Vifra)
+[![codecov](https://codecov.io/gh/matis-schotte/Vifra/branch/develop/graph/badge.svg)](https://codecov.io/gh/matis-schotte/Vifra)
 [![codebeat badge](https://codebeat.co/badges/d4b387f7-639d-4c96-b6d3-13538bb8151c)](https://codebeat.co/projects/github-com-matis-schotte-vifra-develop)
 ![platform](https://img.shields.io/badge/platform-macOS%20%7C%20iOS%20%7C%20watchOS-lightgrey.svg)
 [![Twitter](https://img.shields.io/badge/twitter-@matis_schotte-blue.svg)](http://twitter.com/matis_schotte)
@@ -21,7 +22,7 @@ You can then use the taptic engine with `Vifra.actuate(...)` providing four argu
 Last but not least you should indicate when you are done with the actuator and close the device with `Vifra.teardown()`.
 ```swift
 let didSetup = Vifra.setup()
-let didActuate = Vifra.actuate(6, 0, 1.0, 1.5)
+let didActuate = Vifra.actuate(...)
 let didTeardown = Vifra.teardown()
 ```
 
