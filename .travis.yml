@@ -4,6 +4,6 @@ osx_image: xcode9.2
 before_install:
   - brew install swiftlint
 script:
-  - set -o pipefail && xcodebuild -project Vifra.xcodeproj -scheme Vifra -configuration Release clean build test | xcpretty
+  - set -o pipefail && xcodebuild -project Vifra.xcodeproj -scheme Vifra clean build test | xcpretty
 after_success:
   - bash <(curl -s https://codecov.io/bash)
