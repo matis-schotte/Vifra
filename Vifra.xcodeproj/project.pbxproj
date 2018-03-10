@@ -9,7 +9,19 @@
 /* Begin PBXBuildFile section */
 		CE893B82204A04F400BC1E21 /* Vifra.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE893B81204A04F400BC1E21 /* Vifra.swift */; };
 		CE893B85204A060200BC1E21 /* MultitouchSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE893B86204A060200BC1E21 /* MultitouchSupport.framework */; };
+		CECE76932054914800BC2585 /* VifraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76922054914800BC2585 /* VifraTests.swift */; };
+		CECE76952054914800BC2585 /* Vifra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE893B70204A047500BC1E21 /* Vifra.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CECE76962054914800BC2585 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE893B67204A047500BC1E21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE893B6F204A047500BC1E21;
+			remoteInfo = Vifra;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CE893B70204A047500BC1E21 /* Vifra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vifra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,6 +30,9 @@
 		CE893B83204A054600BC1E21 /* Vifra-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vifra-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE893B86204A060200BC1E21 /* MultitouchSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultitouchSupport.framework; path = /System/Library/PrivateFrameworks/MultitouchSupport.framework; sourceTree = "<absolute>"; };
 		CE893B97204A9F6200BC1E21 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CECE76902054914800BC2585 /* VifraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VifraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECE76922054914800BC2585 /* VifraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VifraTests.swift; sourceTree = "<group>"; };
+		CECE76942054914800BC2585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +44,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CECE768D2054914800BC2585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECE76952054914800BC2585 /* Vifra.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -37,6 +60,7 @@
 			children = (
 				CE893B97204A9F6200BC1E21 /* README.md */,
 				CE893B72204A047500BC1E21 /* Vifra */,
+				CECE76912054914800BC2585 /* VifraTests */,
 				CE893B84204A060200BC1E21 /* Frameworks */,
 				CE893B71204A047500BC1E21 /* Products */,
 			);
@@ -46,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				CE893B70204A047500BC1E21 /* Vifra.framework */,
+				CECE76902054914800BC2585 /* VifraTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +91,15 @@
 				CE893B86204A060200BC1E21 /* MultitouchSupport.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CECE76912054914800BC2585 /* VifraTests */ = {
+			isa = PBXGroup;
+			children = (
+				CECE76922054914800BC2585 /* VifraTests.swift */,
+				CECE76942054914800BC2585 /* Info.plist */,
+			);
+			path = VifraTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,18 +135,41 @@
 			productReference = CE893B70204A047500BC1E21 /* Vifra.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		CECE768F2054914800BC2585 /* VifraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECE76982054914800BC2585 /* Build configuration list for PBXNativeTarget "VifraTests" */;
+			buildPhases = (
+				CECE768C2054914800BC2585 /* Sources */,
+				CECE768D2054914800BC2585 /* Frameworks */,
+				CECE768E2054914800BC2585 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECE76972054914800BC2585 /* PBXTargetDependency */,
+			);
+			name = VifraTests;
+			productName = VifraTests;
+			productReference = CECE76902054914800BC2585 /* VifraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		CE893B67204A047500BC1E21 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = ungeord.net;
 				TargetAttributes = {
 					CE893B6F204A047500BC1E21 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					CECE768F2054914800BC2585 = {
+						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -130,12 +187,20 @@
 			projectRoot = "";
 			targets = (
 				CE893B6F204A047500BC1E21 /* Vifra */,
+				CECE768F2054914800BC2585 /* VifraTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CE893B6E204A047500BC1E21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECE768E2054914800BC2585 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -185,7 +250,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CECE768C2054914800BC2585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECE76932054914800BC2585 /* VifraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CECE76972054914800BC2585 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE893B6F204A047500BC1E21 /* Vifra */;
+			targetProxy = CECE76962054914800BC2585 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CE893B76204A047500BC1E21 /* Debug */ = {
@@ -361,6 +442,34 @@
 			};
 			name = Release;
 		};
+		CECE76992054914800BC2585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 842T2737KX;
+				INFOPLIST_FILE = VifraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ungeord.VifraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		CECE769A2054914800BC2585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 842T2737KX;
+				INFOPLIST_FILE = VifraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ungeord.VifraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -378,6 +487,15 @@
 			buildConfigurations = (
 				CE893B79204A047500BC1E21 /* Debug */,
 				CE893B7A204A047500BC1E21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECE76982054914800BC2585 /* Build configuration list for PBXNativeTarget "VifraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECE76992054914800BC2585 /* Debug */,
+				CECE769A2054914800BC2585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
