@@ -11,6 +11,7 @@
 		CE893B85204A060200BC1E21 /* MultitouchSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE893B86204A060200BC1E21 /* MultitouchSupport.framework */; };
 		CECE76932054914800BC2585 /* VifraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76922054914800BC2585 /* VifraTests.swift */; };
 		CECE76952054914800BC2585 /* Vifra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE893B70204A047500BC1E21 /* Vifra.framework */; };
+		CECE76A220553ADD00BC2585 /* Actuator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76A120553ADD00BC2585 /* Actuator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		CECE76902054914800BC2585 /* VifraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VifraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECE76922054914800BC2585 /* VifraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VifraTests.swift; sourceTree = "<group>"; };
 		CECE76942054914800BC2585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECE76A120553ADD00BC2585 /* Actuator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actuator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				CE893B81204A04F400BC1E21 /* Vifra.swift */,
+				CECE76A120553ADD00BC2585 /* Actuator.swift */,
 				CE893B83204A054600BC1E21 /* Vifra-Bridging-Header.h */,
 				CE893B74204A047500BC1E21 /* Info.plist */,
 			);
@@ -170,6 +173,7 @@
 					};
 					CECE768F2054914800BC2585 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -246,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECE76A220553ADD00BC2585 /* Actuator.swift in Sources */,
 				CE893B82204A04F400BC1E21 /* Vifra.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +450,7 @@
 		CECE76992054914800BC2585 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -454,6 +460,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.ungeord.VifraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -461,6 +468,7 @@
 		CECE769A2054914800BC2585 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
