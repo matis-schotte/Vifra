@@ -11,9 +11,18 @@ import XCTest
 
 class VifraTests: XCTestCase {
     static let params = Vifra.ActuatorParameters(arg1: 0, arg2: 1.0, arg3: 1.5)
+    static var actuatorIsOpen = false
+    
+    override func setUp() {
+        super.setUp()
+        
+        setupActuatorMocks()
+    }
     
     override func tearDown() {
         Vifra.teardown()
+        _ = Actuator.close(NSString())
+        
         super.tearDown()
     }
     
@@ -37,6 +46,17 @@ class VifraTests: XCTestCase {
         XCTAssertTrue(success)
     }
     
+    func testSetupNegative() {
+        // Given
+        _ = Actuator.open(NSString())
+        
+        // When
+        let success = Vifra.setup()
+        
+        // Then
+        XCTAssertFalse(success)
+    }
+    
     func testTeardown() {
         // Given
         XCTAssertTrue(Vifra.setup())
@@ -50,11 +70,25 @@ class VifraTests: XCTestCase {
     
     func testMultiTeardown() {
         // Given
+        XCTAssertTrue(Vifra.teardown())
+        
         // When
         let success = Vifra.teardown()
         
         // Then
         XCTAssertTrue(success)
+    }
+    
+    func testTeardownNegative() {
+        // Given
+        XCTAssertTrue(Vifra.setup())
+        _ = Actuator.close(NSString())
+        
+        // When
+        let success = Vifra.teardown()
+        
+        // Then
+        XCTAssertFalse(success)
     }
     
     func testActuator() {
@@ -81,6 +115,25 @@ class VifraTests: XCTestCase {
         measure {
             XCTAssertTrue(Vifra.setup())
             XCTAssertTrue(Vifra.teardown())
+        }
+    }
+    
+    // MARK: - Private
+    
+    private func setupActuatorMocks() {
+        Actuator.open = { _ in
+            guard !VifraTests.actuatorIsOpen else { return kIOReturnError }
+            VifraTests.actuatorIsOpen = true
+            return kIOReturnSuccess
+        }
+        Actuator.close = { _ in
+            guard VifraTests.actuatorIsOpen else { return kIOReturnError }
+            VifraTests.actuatorIsOpen = false
+            return kIOReturnSuccess
+        }
+        Actuator.actuate = { _, _, _, _, _ in
+            guard VifraTests.actuatorIsOpen else { return kIOReturnError }
+            return kIOReturnSuccess
         }
     }
 }

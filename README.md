@@ -33,7 +33,6 @@ let didTeardown = Vifra.teardown()
 - macOS: You cannot enable the sandboxing entitlement; if you do you'll encounter the error -536870174 during `Vifra.setup()`
 
 ## ToDo
-- Fix Tests by Mocking actuator device
 - Add SwiftPM support
 - Add Cocoapods support
 - Add Carthage support

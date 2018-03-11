@@ -35,8 +35,8 @@ public enum Vifra {
             return true
         }
         
-        let device = MTActuatorCreateFromDeviceID(multitouchActuatorDeviceId).takeRetainedValue()
-        let error = MTActuatorOpen(device)
+        let device = Actuator.create(multitouchActuatorDeviceId).takeRetainedValue()
+        let error = Actuator.open(device)
         guard error == kIOReturnSuccess else {
             os_log("Vifra setup failed, error: %d", error)
             return false
@@ -55,7 +55,7 @@ public enum Vifra {
             return true
         }
         
-        let error = MTActuatorClose(device)
+        let error = Actuator.close(device)
         guard error == kIOReturnSuccess else {
             os_log("Vifra teardown failed, error: %d", error)
             return false
@@ -68,9 +68,7 @@ public enum Vifra {
     ///
     /// - Parameters:
     ///   - actuatonId: <#actuatonId description#>
-    ///   - arg1: <#arg1 description#>
-    ///   - arg2: <#arg2 description#>
-    ///   - arg3: <#arg3 description#>
+    ///   - parameters: <#parameters description#>
     /// - Returns: true on success.
     @discardableResult
     public static func actuate(_ actuatonId: Int32, parameters: ActuatorParameters) -> Bool {
@@ -79,7 +77,7 @@ public enum Vifra {
             return false
         }
         
-        let result = MTActuatorActuate(device, actuatonId, parameters.arg1, parameters.arg2, parameters.arg3)
+        let result = Actuator.actuate(device, actuatonId, parameters.arg1, parameters.arg2, parameters.arg3)
         return result == kIOReturnSuccess
     }
 }
