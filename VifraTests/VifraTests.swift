@@ -121,6 +121,9 @@ class VifraTests: XCTestCase {
     // MARK: - Private
     
     private func setupActuatorMocks() {
+        Actuator.create = { _ in
+            Unmanaged.passUnretained(NSString())
+        }
         Actuator.open = { _ in
             guard !VifraTests.actuatorIsOpen else { return kIOReturnError }
             VifraTests.actuatorIsOpen = true
