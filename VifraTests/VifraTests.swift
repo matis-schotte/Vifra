@@ -135,7 +135,6 @@ class VifraTests: XCTestCase {
             return kIOReturnSuccess
         }
         Actuator.actuate = { _, _, _, _, _ in
-            guard VifraTests.actuatorIsOpen else { return kIOReturnError }
             return kIOReturnSuccess
         }
     }
