@@ -1,0 +1,15 @@
+disabled_rules:
+  - trailing_whitespace
+
+opt_in_rules:
+  - file_header
+
+file_header:
+  required_pattern: |
+                    \/\/
+                    \/\/  .*?\.swift
+                    \/\/  Vifra.*
+                    \/\/
+                    \/\/  Created by Matis Schotte on \d{1,2}\.\d{1,2}\.\d{2}\.
+                    \/\/  Copyright © \d{4} ungeord\.net\. All rights reserved\.
+                    \/\/
