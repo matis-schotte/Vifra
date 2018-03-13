@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/Vifra.html">Vifra</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Vifra.html#/s:5VifraAAO18ActuatorParametersV">– ActuatorParameters</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='vifra' class='heading'>Vifra</h1>
+
+<p><a href="https://travis-ci.org/matis-schotte/Vifra"><img src="https://travis-ci.org/matis-schotte/Vifra.svg?branch=develop" alt="Build Status"></a>
+<a href="https://codebeat.co/projects/github-com-matis-schotte-vifra-develop"><img src="https://codebeat.co/badges/d4b387f7-639d-4c96-b6d3-13538bb8151c" alt="codebeat badge"></a>
+<a href="https://codecov.io/gh/matis-schotte/Vifra"><img src="https://codecov.io/gh/matis-schotte/Vifra/branch/develop/graph/badge.svg" alt="codecov"></a>
+<a href="https://codeclimate.com/github/matis-schotte/Vifra/maintainability"><img src="https://api.codeclimate.com/v1/badges/ef99565e7d56efc70b4b/maintainability" alt="Maintainability"></a>
+<a href="./LICENSE"><img src="https://img.shields.io/github/license/matis-schotte/Vifra.svg" alt="license"></a>
+<a href="https://www.codetriage.com/matis-schotte/vifra"><img src="https://www.codetriage.com/matis-schotte/vifra/badges/users.svg" alt="Open Source Helpers"></a>
+<img src="https://img.shields.io/badge/platform-macOS%20%7C%20iOS%20%7C%20watchOS-lightgrey.svg" alt="platform"></p>
+
+<p><a href="http://twitter.com/matis_schotte"><img src="https://img.shields.io/badge/twitter-@matis_schotte-blue.svg" alt="Twitter"></a>
+<img src="https://img.shields.io/badge/ethereum-0x25C93954ad65f1Bb5A1fd70Ec33f3b9fe72e5e58-yellowgreen.svg" alt="Ethereum">
+<img src="https://img.shields.io/badge/litecoin-MPech47X9GjaatuV4sQsEzoMwGMxKzdXaH-lightgrey.svg" alt="Litecoin"></p>
+
+<p>Vifra is a framework for macOS, iOS and watchOS that provides simplified access to the device actuator to provide haptic feedback through the taptic engine.</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>macOS</li>
+</ul>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>Before you can use the taptic engine it needs to be initialized with <code><a href="Enums/Vifra.html#/s:5VifraAAO5setupSbyFZ">Vifra.setup()</a></code>.
+You can then use the taptic engine with <code><a href="Enums/Vifra.html#/s:5VifraAAO7actuateSbs5Int32V_AB18ActuatorParametersV10parameterstFZ">Vifra.actuate(...)</a></code> providing four arguments.
+Last but not least you should indicate when you are done with the actuator and close the device with <code><a href="Enums/Vifra.html#/s:5VifraAAO8teardownSbyFZ">Vifra.teardown()</a></code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">didSetup</span> <span class="o">=</span> <span class="kt">Vifra</span><span class="o">.</span><span class="nf">setup</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">didActuate</span> <span class="o">=</span> <span class="kt">Vifra</span><span class="o">.</span><span class="nf">actuate</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">didTeardown</span> <span class="o">=</span> <span class="kt">Vifra</span><span class="o">.</span><span class="nf">teardown</span><span class="p">()</span>
+</code></pre>
+<h2 id='know-problems' class='heading'>Know problems</h2>
+
+<ul>
+<li>macOS: A private framework is used; it is therefore unlikely to be accepted in the app store.</li>
+<li>macOS: You cannot enable the sandboxing entitlement; if you do you&rsquo;ll encounter the error -536870174 during <code><a href="Enums/Vifra.html#/s:5VifraAAO5setupSbyFZ">Vifra.setup()</a></code></li>
+</ul>
+<h2 id='todo' class='heading'>ToDo</h2>
+
+<ul>
+<li>Add SwiftPM support</li>
+<li>Add Cocoapods support</li>
+<li>Add Carthage support</li>
+<li>Add iOS support</li>
+<li>Add watchOS support</li>
+</ul>
+<h2 id='license' class='heading'>License</h2>
+
+<p>Vifra is available under the MIT license. See the <a href="./LICENSE">LICENSE</a> file for more info.</p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>Matis Schotte, <a href="mailto:dm26f1cab8aa26@ungeord.net">dm26f1cab8aa26@ungeord.net</a></p>
+
+<p><a href="https://github.com/matis-schotte/Vifra">https://github.com/matis-schotte/Vifra</a></p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-03-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
