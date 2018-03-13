@@ -4,6 +4,7 @@
 [![codebeat badge](https://codebeat.co/badges/d4b387f7-639d-4c96-b6d3-13538bb8151c)](https://codebeat.co/projects/github-com-matis-schotte-vifra-develop)
 [![codecov](https://codecov.io/gh/matis-schotte/Vifra/branch/develop/graph/badge.svg)](https://codecov.io/gh/matis-schotte/Vifra)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ef99565e7d56efc70b4b/maintainability)](https://codeclimate.com/github/matis-schotte/Vifra/maintainability)
+[![Docs](https://matis-schotte.github.io/Vifra/badge.svg)](https://matis-schotte.github.io/Vifra/)
 [![license](https://img.shields.io/github/license/matis-schotte/Vifra.svg)](./LICENSE)
 [![Open Source Helpers](https://www.codetriage.com/matis-schotte/vifra/badges/users.svg)](https://www.codetriage.com/matis-schotte/vifra)
 ![platform](https://img.shields.io/badge/platform-macOS%20%7C%20iOS%20%7C%20watchOS-lightgrey.svg)
@@ -45,7 +46,7 @@ let didTeardown = Vifra.teardown()
 [//]: # (Donations: ETH, XMR, BTC, LTC welcome.)
 
 ## License
-Vifra is available under the MIT license. See the [LICENSE](./LICENSE) file for more info.
+Vifra is available under the MIT license. See the [LICENSE](https://github.com/matis-schotte/Vifra/blob/develop/LICENSE) file for more info.
 
 ## Author
 Matis Schotte, [dm26f1cab8aa26@ungeord.net](mailto:dm26f1cab8aa26@ungeord.net)
