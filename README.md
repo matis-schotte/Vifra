@@ -6,10 +6,11 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/ef99565e7d56efc70b4b/maintainability)](https://codeclimate.com/github/matis-schotte/Vifra/maintainability)
 [![Docs](https://matis-schotte.github.io/Vifra/badge.svg)](https://matis-schotte.github.io/Vifra/)
 [![license](https://img.shields.io/github/license/matis-schotte/Vifra.svg)](./LICENSE)
+
 [![Open Source Helpers](https://www.codetriage.com/matis-schotte/vifra/badges/users.svg)](https://www.codetriage.com/matis-schotte/vifra)
 ![platform](https://img.shields.io/badge/platform-macOS%20%7C%20iOS%20%7C%20watchOS-lightgrey.svg)
-
 [![Twitter](https://img.shields.io/badge/twitter-@matis_schotte-blue.svg)](http://twitter.com/matis_schotte)
+
 ![Ethereum](https://img.shields.io/badge/ethereum-0x25C93954ad65f1Bb5A1fd70Ec33f3b9fe72e5e58-yellowgreen.svg)
 ![Litecoin](https://img.shields.io/badge/litecoin-MPech47X9GjaatuV4sQsEzoMwGMxKzdXaH-lightgrey.svg)
 
