@@ -22,13 +22,10 @@ Vifra is a framework for macOS, iOS and watchOS that provides simplified access 
 [//]: # (Installation: Manual)
 
 ## Usage
-Before you can use the taptic engine it needs to be initialized with `Vifra.setup()`.
-You can then use the taptic engine with `Vifra.actuate(...)` providing four arguments.
-Last but not least you should indicate when you are done with the actuator and close the device with `Vifra.teardown()`.
+You can issue haptic feedback with just any of the following lines using any of the predefined enum values:
 ```swift
-let didSetup = Vifra.setup()
-let didActuate = Vifra.actuate(...)
-let didTeardown = Vifra.teardown()
+Vifra.feedback(.once)
+Vifra.feedback([.once, .twice])
 ```
 
 [//]: # (Example: See the example project snside the `examples/` folder.)
