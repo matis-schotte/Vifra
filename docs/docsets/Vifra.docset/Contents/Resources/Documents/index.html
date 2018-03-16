@@ -66,18 +66,15 @@
 </ul>
 <h2 id='usage' class='heading'>Usage</h2>
 
-<p>Before you can use the taptic engine it needs to be initialized with <code>Vifra.setup()</code>.
-You can then use the taptic engine with <code>Vifra.actuate(...)</code> providing four arguments.
-Last but not least you should indicate when you are done with the actuator and close the device with <code>Vifra.teardown()</code>.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">didSetup</span> <span class="o">=</span> <span class="kt">Vifra</span><span class="o">.</span><span class="nf">setup</span><span class="p">()</span>
-<span class="k">let</span> <span class="nv">didActuate</span> <span class="o">=</span> <span class="kt">Vifra</span><span class="o">.</span><span class="nf">actuate</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="k">let</span> <span class="nv">didTeardown</span> <span class="o">=</span> <span class="kt">Vifra</span><span class="o">.</span><span class="nf">teardown</span><span class="p">()</span>
+<p>You can issue haptic feedback with just any of the following lines using any of the predefined enum values:</p>
+<pre class="highlight swift"><code><span class="kt">Vifra</span><span class="o">.</span><span class="nf">feedback</span><span class="p">(</span><span class="o">.</span><span class="n">once</span><span class="p">)</span>
+<span class="kt">Vifra</span><span class="o">.</span><span class="nf">feedback</span><span class="p">([</span><span class="o">.</span><span class="n">once</span><span class="p">,</span> <span class="o">.</span><span class="n">twice</span><span class="p">])</span>
 </code></pre>
 <h2 id='know-problems' class='heading'>Know problems</h2>
 
 <ul>
 <li>macOS: A private framework is used; it is therefore unlikely to be accepted in the app store.</li>
-<li>macOS: You cannot enable the sandboxing entitlement; if you do you&rsquo;ll encounter the error -536870174 during <code>Vifra.setup()</code></li>
+<li>macOS: You cannot enable the sandboxing entitlement; if you do you&rsquo;ll encounter the error -536870174 during <code>Vifra.setup()</code> which is internally being called from <code>Vifra.feedback()</code>.</li>
 </ul>
 <h2 id='todo' class='heading'>ToDo</h2>
 

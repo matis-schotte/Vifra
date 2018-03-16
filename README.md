@@ -32,7 +32,7 @@ Vifra.feedback([.once, .twice])
 
 ## Know problems
 - macOS: A private framework is used; it is therefore unlikely to be accepted in the app store.
-- macOS: You cannot enable the sandboxing entitlement; if you do you'll encounter the error -536870174 during `Vifra.setup()`
+- macOS: You cannot enable the sandboxing entitlement; if you do you'll encounter the error -536870174 during `Vifra.setup()` which is internally being called from `Vifra.feedback()`.
 
 ## ToDo
 - Add SwiftPM support
