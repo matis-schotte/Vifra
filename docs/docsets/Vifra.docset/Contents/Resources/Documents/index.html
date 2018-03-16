@@ -34,9 +34,6 @@
               <li class="nav-group-task">
                 <a href="Enums/Vifra.html">Vifra</a>
               </li>
-              <li class="nav-group-task">
-                <a href="Enums/Vifra.html#/s:5VifraAAO18ActuatorParametersV">– ActuatorParameters</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -52,12 +49,13 @@
 <a href="https://codecov.io/gh/matis-schotte/Vifra"><img src="https://codecov.io/gh/matis-schotte/Vifra/branch/develop/graph/badge.svg" alt="codecov"></a>
 <a href="https://codeclimate.com/github/matis-schotte/Vifra/maintainability"><img src="https://api.codeclimate.com/v1/badges/ef99565e7d56efc70b4b/maintainability" alt="Maintainability"></a>
 <a href="https://matis-schotte.github.io/Vifra/"><img src="https://matis-schotte.github.io/Vifra/badge.svg" alt="Docs"></a>
-<a href="./LICENSE"><img src="https://img.shields.io/github/license/matis-schotte/Vifra.svg" alt="license"></a>
-<a href="https://www.codetriage.com/matis-schotte/vifra"><img src="https://www.codetriage.com/matis-schotte/vifra/badges/users.svg" alt="Open Source Helpers"></a>
-<img src="https://img.shields.io/badge/platform-macOS%20%7C%20iOS%20%7C%20watchOS-lightgrey.svg" alt="platform"></p>
+<a href="./LICENSE"><img src="https://img.shields.io/github/license/matis-schotte/Vifra.svg" alt="license"></a></p>
 
-<p><a href="http://twitter.com/matis_schotte"><img src="https://img.shields.io/badge/twitter-@matis_schotte-blue.svg" alt="Twitter"></a>
-<img src="https://img.shields.io/badge/ethereum-0x25C93954ad65f1Bb5A1fd70Ec33f3b9fe72e5e58-yellowgreen.svg" alt="Ethereum">
+<p><a href="https://www.codetriage.com/matis-schotte/vifra"><img src="https://www.codetriage.com/matis-schotte/vifra/badges/users.svg" alt="Open Source Helpers"></a>
+<img src="https://img.shields.io/badge/platform-macOS%20%7C%20iOS%20%7C%20watchOS-lightgrey.svg" alt="platform">
+<a href="http://twitter.com/matis_schotte"><img src="https://img.shields.io/badge/twitter-@matis_schotte-blue.svg" alt="Twitter"></a></p>
+
+<p><img src="https://img.shields.io/badge/ethereum-0x25C93954ad65f1Bb5A1fd70Ec33f3b9fe72e5e58-yellowgreen.svg" alt="Ethereum">
 <img src="https://img.shields.io/badge/litecoin-MPech47X9GjaatuV4sQsEzoMwGMxKzdXaH-lightgrey.svg" alt="Litecoin"></p>
 
 <p>Vifra is a framework for macOS, iOS and watchOS that provides simplified access to the device actuator to provide haptic feedback through the taptic engine.</p>
@@ -68,9 +66,9 @@
 </ul>
 <h2 id='usage' class='heading'>Usage</h2>
 
-<p>Before you can use the taptic engine it needs to be initialized with <code><a href="Enums/Vifra.html#/s:5VifraAAO5setupSbyFZ">Vifra.setup()</a></code>.
-You can then use the taptic engine with <code><a href="Enums/Vifra.html#/s:5VifraAAO7actuateSbs5Int32V_AB18ActuatorParametersV10parameterstFZ">Vifra.actuate(...)</a></code> providing four arguments.
-Last but not least you should indicate when you are done with the actuator and close the device with <code><a href="Enums/Vifra.html#/s:5VifraAAO8teardownSbyFZ">Vifra.teardown()</a></code>.</p>
+<p>Before you can use the taptic engine it needs to be initialized with <code>Vifra.setup()</code>.
+You can then use the taptic engine with <code>Vifra.actuate(...)</code> providing four arguments.
+Last but not least you should indicate when you are done with the actuator and close the device with <code>Vifra.teardown()</code>.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">didSetup</span> <span class="o">=</span> <span class="kt">Vifra</span><span class="o">.</span><span class="nf">setup</span><span class="p">()</span>
 <span class="k">let</span> <span class="nv">didActuate</span> <span class="o">=</span> <span class="kt">Vifra</span><span class="o">.</span><span class="nf">actuate</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">didTeardown</span> <span class="o">=</span> <span class="kt">Vifra</span><span class="o">.</span><span class="nf">teardown</span><span class="p">()</span>
@@ -79,7 +77,7 @@ Last but not least you should indicate when you are done with the actuator and c
 
 <ul>
 <li>macOS: A private framework is used; it is therefore unlikely to be accepted in the app store.</li>
-<li>macOS: You cannot enable the sandboxing entitlement; if you do you&rsquo;ll encounter the error -536870174 during <code><a href="Enums/Vifra.html#/s:5VifraAAO5setupSbyFZ">Vifra.setup()</a></code></li>
+<li>macOS: You cannot enable the sandboxing entitlement; if you do you&rsquo;ll encounter the error -536870174 during <code>Vifra.setup()</code></li>
 </ul>
 <h2 id='todo' class='heading'>ToDo</h2>
 
@@ -102,7 +100,7 @@ Last but not least you should indicate when you are done with the actuator and c
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://ungeord.net" target="_blank" rel="external">Matis Schotte</a>. All rights reserved. (Last updated: 2018-03-14)</p>
+          <p>&copy; 2018 <a class="link" href="https://ungeord.net" target="_blank" rel="external">Matis Schotte</a>. All rights reserved. (Last updated: 2018-03-16)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

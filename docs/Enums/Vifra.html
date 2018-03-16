@@ -35,9 +35,6 @@
               <li class="nav-group-task">
                 <a href="../Enums/Vifra.html">Vifra</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Enums/Vifra.html#/s:5VifraAAO18ActuatorParametersV">– ActuatorParameters</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -62,9 +59,9 @@ to the device actuator to provide haptic feedback through the taptic engine.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5VifraAAO18ActuatorParametersV"></a>
-                    <a name="//apple_ref/swift/Struct/ActuatorParameters" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5VifraAAO18ActuatorParametersV">ActuatorParameters</a>
+                    <a name="/s:5VifraAAO4onceA2BmF"></a>
+                    <a name="//apple_ref/swift/Element/once" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5VifraAAO4onceA2BmF">once</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -72,26 +69,30 @@ to the device actuator to provide haptic feedback through the taptic engine.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>&lt;#Description#&gt;</p>
+                        <p>A single haptic.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ActuatorParameters</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">once</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5VifraAAO5setupSbyFZ"></a>
-                    <a name="//apple_ref/swift/Method/setup()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5VifraAAO5setupSbyFZ">setup()</a>
+                    <a name="/s:5VifraAAO5twiceA2BmF"></a>
+                    <a name="//apple_ref/swift/Element/twice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5VifraAAO5twiceA2BmF">twice</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -99,30 +100,30 @@ to the device actuator to provide haptic feedback through the taptic engine.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes Vifra by opening the actuator device.</p>
+                        <p>A double haptic.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">setup</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">twice</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>true on success.</p>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5VifraAAO8teardownSbyFZ"></a>
-                    <a name="//apple_ref/swift/Method/teardown()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5VifraAAO8teardownSbyFZ">teardown()</a>
+                    <a name="/s:5VifraAAO8feedbackyABFZ"></a>
+                    <a name="//apple_ref/swift/Method/feedback(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5VifraAAO8feedbackyABFZ">feedback(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -130,45 +131,14 @@ to the device actuator to provide haptic feedback through the taptic engine.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Cleans up Vifra by closing the actuator device.</p>
+                        <p>Blocking call to play a single haptic.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">teardown</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>true on success.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5VifraAAO7actuateSbs5Int32V_AB18ActuatorParametersV10parameterstFZ"></a>
-                    <a name="//apple_ref/swift/Method/actuate(_:parameters:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5VifraAAO7actuateSbs5Int32V_AB18ActuatorParametersV10parameterstFZ">actuate(_:parameters:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Plays the taptic engine to provide haptic feedback.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">actuate</span><span class="p">(</span><span class="n">_</span> <span class="nv">actuatonId</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt"><a href="../Enums/Vifra.html#/s:5VifraAAO18ActuatorParametersV">ActuatorParameters</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">feedback</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">Vifra</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -179,33 +149,63 @@ to the device actuator to provide haptic feedback through the taptic engine.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>actuatonId</em>
+                                <em>type</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>&lt;#actuatonId description#&gt;</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>parameters</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>&lt;#parameters description#&gt;</p>
+                                  <p>The type of haptic to play.</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5VifraAAO8feedbackySayABGFZ"></a>
+                    <a name="//apple_ref/swift/Method/feedback(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5VifraAAO8feedbackySayABGFZ">feedback(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Blocking call to play multiple haptics.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">feedback</span><span class="p">(</span><span class="n">_</span> <span class="nv">types</span><span class="p">:</span> <span class="p">[</span><span class="kt">Vifra</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
                       <div>
-                        <h4>Return Value</h4>
-                        <p>true on success.</p>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>types</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The types of haptic to play.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -215,7 +215,7 @@ to the device actuator to provide haptic feedback through the taptic engine.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://ungeord.net" target="_blank" rel="external">Matis Schotte</a>. All rights reserved. (Last updated: 2018-03-14)</p>
+          <p>&copy; 2018 <a class="link" href="https://ungeord.net" target="_blank" rel="external">Matis Schotte</a>. All rights reserved. (Last updated: 2018-03-16)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
