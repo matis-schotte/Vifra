@@ -14,6 +14,8 @@
 		CECE76A220553ADD00BC2585 /* Actuator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76A120553ADD00BC2585 /* Actuator.swift */; };
 		CECE76A5205AF55D00BC2585 /* VifraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76A4205AF55D00BC2585 /* VifraTests.swift */; };
 		CECE76A7205B2C6F00BC2585 /* ActuatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76A6205B2C6F00BC2585 /* ActuatorMock.swift */; };
+		CECE76AF205C83DE00BC2585 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76AE205C83DE00BC2585 /* main.swift */; };
+		CECE76B5205C83F900BC2585 /* Vifra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE893B70204A047500BC1E21 /* Vifra.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +26,26 @@
 			remoteGlobalIDString = CE893B6F204A047500BC1E21;
 			remoteInfo = Vifra;
 		};
+		CECE76B3205C83F000BC2585 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE893B67204A047500BC1E21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE893B6F204A047500BC1E21;
+			remoteInfo = Vifra;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CECE76AA205C83DD00BC2585 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE893B70204A047500BC1E21 /* Vifra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vifra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +60,8 @@
 		CECE76A120553ADD00BC2585 /* Actuator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actuator.swift; sourceTree = "<group>"; };
 		CECE76A4205AF55D00BC2585 /* VifraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VifraTests.swift; sourceTree = "<group>"; };
 		CECE76A6205B2C6F00BC2585 /* ActuatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActuatorMock.swift; sourceTree = "<group>"; };
+		CECE76AC205C83DD00BC2585 /* VifraExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VifraExample; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECE76AE205C83DE00BC2585 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +81,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CECE76A9205C83DD00BC2585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECE76B5205C83F900BC2585 /* Vifra.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +98,7 @@
 				CE893B97204A9F6200BC1E21 /* README.md */,
 				CE893B72204A047500BC1E21 /* Vifra */,
 				CECE76912054914800BC2585 /* VifraTests */,
+				CECE76AD205C83DE00BC2585 /* VifraExample */,
 				CE893B84204A060200BC1E21 /* Frameworks */,
 				CE893B71204A047500BC1E21 /* Products */,
 			);
@@ -77,6 +109,7 @@
 			children = (
 				CE893B70204A047500BC1E21 /* Vifra.framework */,
 				CECE76902054914800BC2585 /* VifraTests.xctest */,
+				CECE76AC205C83DD00BC2585 /* VifraExample */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +142,14 @@
 				CECE76942054914800BC2585 /* Info.plist */,
 			);
 			path = VifraTests;
+			sourceTree = "<group>";
+		};
+		CECE76AD205C83DE00BC2585 /* VifraExample */ = {
+			isa = PBXGroup;
+			children = (
+				CECE76AE205C83DE00BC2585 /* main.swift */,
+			);
+			path = VifraExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +203,24 @@
 			productReference = CECE76902054914800BC2585 /* VifraTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CECE76AB205C83DD00BC2585 /* VifraExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECE76B0205C83DE00BC2585 /* Build configuration list for PBXNativeTarget "VifraExample" */;
+			buildPhases = (
+				CECE76A8205C83DD00BC2585 /* Sources */,
+				CECE76A9205C83DD00BC2585 /* Frameworks */,
+				CECE76AA205C83DD00BC2585 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECE76B4205C83F000BC2585 /* PBXTargetDependency */,
+			);
+			name = VifraExample;
+			productName = VifraExample;
+			productReference = CECE76AC205C83DD00BC2585 /* VifraExample */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -182,6 +241,10 @@
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
+					CECE76AB205C83DD00BC2585 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = CE893B6A204A047500BC1E21 /* Build configuration list for PBXProject "Vifra" */;
@@ -198,6 +261,7 @@
 			targets = (
 				CE893B6F204A047500BC1E21 /* Vifra */,
 				CECE768F2054914800BC2585 /* VifraTests */,
+				CECE76AB205C83DD00BC2585 /* VifraExample */,
 			);
 		};
 /* End PBXProject section */
@@ -271,6 +335,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CECE76A8205C83DD00BC2585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECE76AF205C83DE00BC2585 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -278,6 +350,11 @@
 			isa = PBXTargetDependency;
 			target = CE893B6F204A047500BC1E21 /* Vifra */;
 			targetProxy = CECE76962054914800BC2585 /* PBXContainerItemProxy */;
+		};
+		CECE76B4205C83F000BC2585 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE893B6F204A047500BC1E21 /* Vifra */;
+			targetProxy = CECE76B3205C83F000BC2585 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -490,6 +567,30 @@
 			};
 			name = Release;
 		};
+		CECE76B1205C83DE00BC2585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		CECE76B2205C83DE00BC2585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -516,6 +617,15 @@
 			buildConfigurations = (
 				CECE76992054914800BC2585 /* Debug */,
 				CECE769A2054914800BC2585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECE76B0205C83DE00BC2585 /* Build configuration list for PBXNativeTarget "VifraExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECE76B1205C83DE00BC2585 /* Debug */,
+				CECE76B2205C83DE00BC2585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
