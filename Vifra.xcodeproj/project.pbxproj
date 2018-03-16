@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		CE893B82204A04F400BC1E21 /* Vifra.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE893B81204A04F400BC1E21 /* Vifra.swift */; };
 		CE893B85204A060200BC1E21 /* MultitouchSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE893B86204A060200BC1E21 /* MultitouchSupport.framework */; };
-		CECE76932054914800BC2585 /* VifraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76922054914800BC2585 /* VifraTests.swift */; };
+		CECE76932054914800BC2585 /* ActuatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76922054914800BC2585 /* ActuatorTests.swift */; };
 		CECE76952054914800BC2585 /* Vifra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE893B70204A047500BC1E21 /* Vifra.framework */; };
 		CECE76A220553ADD00BC2585 /* Actuator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76A120553ADD00BC2585 /* Actuator.swift */; };
+		CECE76A5205AF55D00BC2585 /* VifraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76A4205AF55D00BC2585 /* VifraTests.swift */; };
+		CECE76A7205B2C6F00BC2585 /* ActuatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76A6205B2C6F00BC2585 /* ActuatorMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +34,11 @@
 		CE893B86204A060200BC1E21 /* MultitouchSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultitouchSupport.framework; path = /System/Library/PrivateFrameworks/MultitouchSupport.framework; sourceTree = "<absolute>"; };
 		CE893B97204A9F6200BC1E21 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CECE76902054914800BC2585 /* VifraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VifraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CECE76922054914800BC2585 /* VifraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VifraTests.swift; sourceTree = "<group>"; };
+		CECE76922054914800BC2585 /* ActuatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActuatorTests.swift; sourceTree = "<group>"; };
 		CECE76942054914800BC2585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECE76A120553ADD00BC2585 /* Actuator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actuator.swift; sourceTree = "<group>"; };
+		CECE76A4205AF55D00BC2585 /* VifraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VifraTests.swift; sourceTree = "<group>"; };
+		CECE76A6205B2C6F00BC2585 /* ActuatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActuatorMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,9 @@
 		CECE76912054914800BC2585 /* VifraTests */ = {
 			isa = PBXGroup;
 			children = (
-				CECE76922054914800BC2585 /* VifraTests.swift */,
+				CECE76A4205AF55D00BC2585 /* VifraTests.swift */,
+				CECE76922054914800BC2585 /* ActuatorTests.swift */,
+				CECE76A6205B2C6F00BC2585 /* ActuatorMock.swift */,
 				CECE76942054914800BC2585 /* Info.plist */,
 			);
 			path = VifraTests;
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECE76932054914800BC2585 /* VifraTests.swift in Sources */,
+				CECE76A7205B2C6F00BC2585 /* ActuatorMock.swift in Sources */,
+				CECE76A5205AF55D00BC2585 /* VifraTests.swift in Sources */,
+				CECE76932054914800BC2585 /* ActuatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
