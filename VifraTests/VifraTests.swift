@@ -19,7 +19,7 @@ class VifraTests: XCTestCase {
     func testSingleHaptic() {
         // Given
         // When
-        Vifra.feedback(.once)
+        Vifra.feedback(.weak)
         
         // Then
         XCTAssertFalse(ActuatorMock.actuatorIsOpen)
@@ -29,7 +29,7 @@ class VifraTests: XCTestCase {
     func testMultipleHaptics() {
         // Given
         // When
-        Vifra.feedback([.once, .twice])
+        Vifra.feedback([.weak, .strong])
         
         // Then
         XCTAssertFalse(ActuatorMock.actuatorIsOpen)
