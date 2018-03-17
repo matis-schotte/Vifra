@@ -15,21 +15,20 @@ enum ActuatorMock {
     
     static func setupActuatorMocks() {
         ActuatorMock.actuateCalled = 0
-        
-        Actuator.create = { _ in Unmanaged.passUnretained(NSString()) }
-        Actuator.open = { _ in
-            guard !ActuatorMock.actuatorIsOpen else { return kIOReturnError }
-            ActuatorMock.actuatorIsOpen = true
-            return kIOReturnSuccess
-        }
-        Actuator.close = { _ in
-            guard ActuatorMock.actuatorIsOpen else { return kIOReturnError }
-            ActuatorMock.actuatorIsOpen = false
-            return kIOReturnSuccess
-        }
-        Actuator.actuate = { _, _, _, _, _ in
-            ActuatorMock.actuateCalled += 1
-            return kIOReturnSuccess
-        }
+        Actuator.device = (create: { _ in Unmanaged.passUnretained(NSString()) },
+                           open: { _ in
+                               guard !ActuatorMock.actuatorIsOpen else { return kIOReturnError }
+                               ActuatorMock.actuatorIsOpen = true
+                               return kIOReturnSuccess
+                           },
+                           close: { _ in
+                               guard ActuatorMock.actuatorIsOpen else { return kIOReturnError }
+                               ActuatorMock.actuatorIsOpen = false
+                               return kIOReturnSuccess
+                           },
+                           actuate: { _, _, _, _, _ in
+                               ActuatorMock.actuateCalled += 1
+                               return kIOReturnSuccess
+        })
     }
 }

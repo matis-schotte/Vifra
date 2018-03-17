@@ -13,10 +13,10 @@ import os.log
 enum Actuator {
     typealias Parameters = (arg1: UInt32, arg2: Float32, arg3: Float32)
     
-    static var create = MTActuatorCreateFromDeviceID
-    static var open = MTActuatorOpen
-    static var close = MTActuatorClose
-    static var actuate = MTActuatorActuate
+    static var device = (create: MTActuatorCreateFromDeviceID,
+                         open: MTActuatorOpen,
+                         close: MTActuatorClose,
+                         actuate: MTActuatorActuate)
     
     private static let multitouchActuatorDeviceId: UInt64 = 0x200_0000_0100_0000
     private static var actuatorReference: AnyObject?
@@ -31,13 +31,13 @@ enum Actuator {
             return true
         }
         
-        let device = Actuator.create(multitouchActuatorDeviceId).takeRetainedValue()
-        let error = Actuator.open(device)
+        let actuator = device.create(multitouchActuatorDeviceId).takeRetainedValue()
+        let error = device.open(actuator)
         guard error == kIOReturnSuccess else {
             os_log("Vifra setup failed, error: %d", error)
             return false
         }
-        actuatorReference = device
+        actuatorReference = actuator
         return true
     }
     
@@ -46,12 +46,12 @@ enum Actuator {
     /// - Returns: true on success.
     @discardableResult
     static func teardown() -> Bool {
-        guard let device = actuatorReference else {
+        guard let actuator = actuatorReference else {
             os_log("Vifra not initialized or already torn down.")
             return true
         }
         
-        let error = Actuator.close(device)
+        let error = device.close(actuator)
         guard error == kIOReturnSuccess else {
             os_log("Vifra teardown failed, error: %d", error)
             return false
@@ -68,12 +68,12 @@ enum Actuator {
     /// - Returns: true on success.
     @discardableResult
     static func actuate(_ actuatonId: Int32, parameters: Parameters) -> Bool {
-        guard let device = actuatorReference else {
+        guard let actuator = actuatorReference else {
             os_log("Vifra not initialized, call 'Vifra.setup()' first.")
             return false
         }
         
-        let result = Actuator.actuate(device, actuatonId, parameters.arg1, parameters.arg2, parameters.arg3)
+        let result = device.actuate(actuator, actuatonId, parameters.arg1, parameters.arg2, parameters.arg3)
         return result == kIOReturnSuccess
     }
 }

@@ -20,7 +20,7 @@ class ActuatorTests: XCTestCase {
     
     override func tearDown() {
         Actuator.teardown()
-        _ = Actuator.close(NSString())
+        _ = Actuator.device.close(NSString())
         
         super.tearDown()
     }
@@ -47,7 +47,7 @@ class ActuatorTests: XCTestCase {
     
     func testSetupNegative() {
         // Given
-        _ = Actuator.open(NSString())
+        _ = Actuator.device.open(NSString())
         
         // When
         let success = Actuator.setup()
@@ -81,7 +81,7 @@ class ActuatorTests: XCTestCase {
     func testTeardownNegative() {
         // Given
         XCTAssertTrue(Actuator.setup())
-        _ = Actuator.close(NSString())
+        _ = Actuator.device.close(NSString())
         
         // When
         let success = Actuator.teardown()
