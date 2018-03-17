@@ -11,6 +11,8 @@
 public enum Vifra {
     /// A weak haptic.
     case weak
+    /// A medium haptic.
+    case medium
     /// A strong haptic.
     case strong
     /// A delay between haptics (after each successful haptic a min delay of 8500 usec is enforced).
@@ -30,21 +32,24 @@ public enum Vifra {
         Actuator.setup()
         
         for type in types {
-            guard let params = parameters(for: type) else { continue }
+            guard let actuationID = type.actuationID else { continue }
             
-            Actuator.actuate(6, parameters: params)
+            let params = Actuator.Parameters(arg1: 0, arg2: 1.0, arg3: 1.5)
+            Actuator.actuate(actuationID, parameters: params)
             usleep(8500)
         }
         
         Actuator.teardown()
     }
     
-    private static func parameters(for type: Vifra) -> Actuator.Parameters? {
-        switch type {
+    private var actuationID: Int32? {
+        switch self {
         case .weak:
-            return Actuator.Parameters(arg1: 0, arg2: 1.0, arg3: 1.5)
+            return 3
+        case .medium:
+            return 4
         case .strong:
-            return Actuator.Parameters(arg1: 0, arg2: 1.0, arg3: 1.5)
+            return 6
         case let .delay(usec):
             usleep(usec)
             return nil
