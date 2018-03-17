@@ -29,10 +29,10 @@ class VifraTests: XCTestCase {
     func testMultipleHaptics() {
         // Given
         // When
-        Vifra.feedback([.weak, .strong])
+        Vifra.feedback([.weak, .medium, .delay(usec: 50000), .strong])
         
         // Then
         XCTAssertFalse(ActuatorMock.actuatorIsOpen)
-        XCTAssertEqual(ActuatorMock.actuateCalled, 2)
+        XCTAssertEqual(ActuatorMock.actuateCalled, 3)
     }
 }
