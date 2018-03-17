@@ -24,8 +24,8 @@ Vifra is a framework for macOS, iOS and watchOS that provides simplified access 
 ## Usage
 You can issue haptic feedback with just any of the following lines using any of the predefined enum values:
 ```swift
-Vifra.feedback(.once)
-Vifra.feedback([.once, .twice])
+Vifra.feedback(.strong)
+Vifra.feedback([.strong, .weak, .delay(usec: 500_000), .strong])
 ```
 
 [//]: # (Example: See the example project snside the `examples/` folder.)
