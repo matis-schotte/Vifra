@@ -62,6 +62,7 @@
 		CECE76A6205B2C6F00BC2585 /* ActuatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActuatorMock.swift; sourceTree = "<group>"; };
 		CECE76AC205C83DD00BC2585 /* VifraExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VifraExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECE76AE205C83DE00BC2585 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CECE76B8205DCC8800BC2585 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CE893B97204A9F6200BC1E21 /* README.md */,
+				CECE76B8205DCC8800BC2585 /* CHANGELOG.md */,
 				CE893B72204A047500BC1E21 /* Vifra */,
 				CECE76912054914800BC2585 /* VifraTests */,
 				CECE76AD205C83DE00BC2585 /* VifraExample */,
@@ -390,7 +392,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.1.0;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -452,7 +454,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.1.0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
