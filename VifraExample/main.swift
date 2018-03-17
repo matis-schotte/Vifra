@@ -9,4 +9,4 @@
 import Vifra
 
 print("Hello, Vifra!")
-Vifra.feedback(.twice)
+Vifra.feedback([.strong, .weak, .delay(usec: 500_000), .strong])
