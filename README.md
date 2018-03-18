@@ -7,7 +7,7 @@
 [![Docs](https://matis-schotte.github.io/Vifra/badge.svg)](https://matis-schotte.github.io/Vifra/)
 [![license](https://img.shields.io/github/license/matis-schotte/Vifra.svg)](./LICENSE)
 
-[![Version](https://img.shields.io/cocoapods/v/Vifra)](http://cocoapods.org/pods/Vifra)
+[![Version](https://img.shields.io/cocoapods/v/Vifra.svg)](http://cocoapods.org/pods/Vifra)
 [![Open Source Helpers](https://www.codetriage.com/matis-schotte/vifra/badges/users.svg)](https://www.codetriage.com/matis-schotte/vifra)
 ![platform](https://img.shields.io/badge/platform-macOS%20%7C%20iOS%20%7C%20watchOS-lightgrey.svg)
 [![Twitter](https://img.shields.io/badge/twitter-@matis_schotte-blue.svg)](http://twitter.com/matis_schotte)
@@ -33,7 +33,7 @@ To integrate Vifra into your Xcode project using CocoaPods, specify it in your `
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :osx, '12.0'
+platform :osx, '10.12'
 use_frameworks!
 
 pod 'Vifra'

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Vifra"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "Easy Haptic Feedback in Swift"
   s.description  = <<-DESC
 Vifra is a framework for macOS, iOS and watchOS that provides simplified access to the device actuator to provide haptic feedback through the taptic engine.
