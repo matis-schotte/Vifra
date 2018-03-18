@@ -7,6 +7,7 @@
 [![Docs](https://matis-schotte.github.io/Vifra/badge.svg)](https://matis-schotte.github.io/Vifra/)
 [![license](https://img.shields.io/github/license/matis-schotte/Vifra.svg)](./LICENSE)
 
+[![Version](https://img.shields.io/cocoapods/v/Vifra)](http://cocoapods.org/pods/Vifra)
 [![Open Source Helpers](https://www.codetriage.com/matis-schotte/vifra/badges/users.svg)](https://www.codetriage.com/matis-schotte/vifra)
 ![platform](https://img.shields.io/badge/platform-macOS%20%7C%20iOS%20%7C%20watchOS-lightgrey.svg)
 [![Twitter](https://img.shields.io/badge/twitter-@matis_schotte-blue.svg)](http://twitter.com/matis_schotte)
@@ -19,7 +20,32 @@ Vifra is a framework for macOS, iOS and watchOS that provides simplified access 
 ## Requirements
 - macOS
 
-[//]: # (Installation: Manual)
+## Installation
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate Vifra into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :osx, '12.0'
+use_frameworks!
+
+pod 'Vifra'
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+[//]: # (Manual)
 
 ## Usage
 You can issue haptic feedback with just any of the following lines using any of the predefined enum values:
@@ -36,7 +62,6 @@ Vifra.feedback([.strong, .weak, .delay(usec: 500_000), .strong])
 
 ## ToDo
 - Add SwiftPM support
-- Add Cocoapods support
 - Add Carthage support
 - Add iOS support
 - Add watchOS support

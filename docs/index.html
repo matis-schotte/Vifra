@@ -51,7 +51,8 @@
 <a href="https://matis-schotte.github.io/Vifra/"><img src="https://matis-schotte.github.io/Vifra/badge.svg" alt="Docs"></a>
 <a href="./LICENSE"><img src="https://img.shields.io/github/license/matis-schotte/Vifra.svg" alt="license"></a></p>
 
-<p><a href="https://www.codetriage.com/matis-schotte/vifra"><img src="https://www.codetriage.com/matis-schotte/vifra/badges/users.svg" alt="Open Source Helpers"></a>
+<p><a href="http://cocoapods.org/pods/Vifra"><img src="https://img.shields.io/cocoapods/v/Vifra" alt="Version"></a>
+<a href="https://www.codetriage.com/matis-schotte/vifra"><img src="https://www.codetriage.com/matis-schotte/vifra/badges/users.svg" alt="Open Source Helpers"></a>
 <img src="https://img.shields.io/badge/platform-macOS%20%7C%20iOS%20%7C%20watchOS-lightgrey.svg" alt="platform">
 <a href="http://twitter.com/matis_schotte"><img src="https://img.shields.io/badge/twitter-@matis_schotte-blue.svg" alt="Twitter"></a></p>
 
@@ -64,6 +65,24 @@
 <ul>
 <li>macOS</li>
 </ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>gem install cocoapods
+</code></pre>
+
+<p>To integrate Vifra into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
+<span class="n">platform</span> <span class="ss">:osx</span><span class="p">,</span> <span class="s1">'12.0'</span>
+<span class="n">use_frameworks!</span>
+
+<span class="n">pod</span> <span class="s1">'Vifra'</span>
+</code></pre>
+
+<p>Then, run the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>pod install
+</code></pre>
 <h2 id='usage' class='heading'>Usage</h2>
 
 <p>You can issue haptic feedback with just any of the following lines using any of the predefined enum values:</p>
@@ -80,7 +99,6 @@
 
 <ul>
 <li>Add SwiftPM support</li>
-<li>Add Cocoapods support</li>
 <li>Add Carthage support</li>
 <li>Add iOS support</li>
 <li>Add watchOS support</li>
