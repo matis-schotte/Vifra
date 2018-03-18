@@ -16,6 +16,7 @@
 		CECE76A7205B2C6F00BC2585 /* ActuatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76A6205B2C6F00BC2585 /* ActuatorMock.swift */; };
 		CECE76AF205C83DE00BC2585 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76AE205C83DE00BC2585 /* main.swift */; };
 		CECE76B5205C83F900BC2585 /* Vifra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE893B70204A047500BC1E21 /* Vifra.framework */; };
+		CECE76BA205DD57800BC2585 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CECE76B9205DD57800BC2585 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		CECE76AC205C83DD00BC2585 /* VifraExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VifraExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECE76AE205C83DE00BC2585 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CECE76B8205DCC8800BC2585 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		CECE76B9205DD57800BC2585 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				CE893B97204A9F6200BC1E21 /* README.md */,
 				CECE76B8205DCC8800BC2585 /* CHANGELOG.md */,
+				CECE76B9205DD57800BC2585 /* LICENSE */,
 				CE893B72204A047500BC1E21 /* Vifra */,
 				CECE76912054914800BC2585 /* VifraTests */,
 				CECE76AD205C83DE00BC2585 /* VifraExample */,
@@ -273,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECE76BA205DD57800BC2585 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
