@@ -65,6 +65,8 @@
 		CECE76AE205C83DE00BC2585 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CECE76B8205DCC8800BC2585 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		CECE76B9205DD57800BC2585 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CECE76BC2060386000BC2585 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		CECE76BD2060387F00BC2585 /* Vifra.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Vifra.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,8 @@
 				CE893B97204A9F6200BC1E21 /* README.md */,
 				CECE76B8205DCC8800BC2585 /* CHANGELOG.md */,
 				CECE76B9205DD57800BC2585 /* LICENSE */,
+				CECE76BC2060386000BC2585 /* Package.swift */,
+				CECE76BD2060387F00BC2585 /* Vifra.podspec */,
 				CE893B72204A047500BC1E21 /* Vifra */,
 				CECE76912054914800BC2585 /* VifraTests */,
 				CECE76AD205C83DE00BC2585 /* VifraExample */,
