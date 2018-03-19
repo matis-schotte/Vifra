@@ -8,4 +8,4 @@
 
 import PackageDescription
 
-let package = Package(name: "Vifra", dependencies : [], exclude: ["VifraTests", "VifraExample"])
+let package = Package(name: "Vifra", dependencies: [], exclude: ["VifraTests", "VifraExample", "docs"])
