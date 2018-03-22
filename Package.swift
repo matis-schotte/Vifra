@@ -1,3 +1,4 @@
+// swift-tools-version:4.0
 //
 //  Package.swift
 //  Vifra
@@ -8,4 +9,23 @@
 
 import PackageDescription
 
-let package = Package(name: "Vifra", dependencies: [], exclude: ["VifraTests", "VifraExample", "docs"])
+let package = Package(
+    name: "Vifra",
+    products: [
+        .library(
+            name: "Vifra",
+            targets: ["Vifra"]
+        )
+    ],
+    targets: [
+        .target(
+            name: "Vifra",
+            path: "Vifra"
+        ),
+        .testTarget(
+            name: "VifraTests",
+            path: "VifraTests",
+            dependencies: ["Vifra"]
+        )
+    ]
+)
