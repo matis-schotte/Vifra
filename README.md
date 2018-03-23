@@ -18,7 +18,8 @@
 Vifra is a framework for macOS, iOS and watchOS that provides simplified access to the device actuator to provide haptic feedback through the taptic engine.
 
 ## Requirements
-- macOS
+- macOS >= 10.12
+- Swift >= 4
 
 ## Installation
 ### CocoaPods
@@ -45,6 +46,24 @@ Then, run the following command:
 $ pod install
 ```
 
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but Vifra does support its use on supported platforms.
+
+Once you have your Swift package set up, adding Vifra as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+.package(url: "https://github.com/matis-schotte/Vifra.git", from: "0.3.0")
+]
+```
+
+Do not forget to ensure that the deployment target is set to the correct version (e.g. macOS 10.12), and that all necessary Frameworks are linked (e.g. MultitouchSupport.framework). To avoid getting "undefined symbols" the Bridging header should be used. Possible build command could be:
+
+```bash
+$ swift build -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.12" -Xswiftc "-import-objc-header" -Xswiftc ".build/checkouts/Vifra.git-6919244937016367571/Vifra/Vifra-Bridging-Header.h" -Xlinker -F/System/Library/PrivateFrameworks -Xlinker -lMultitouchSupport && swift run
+```
+
 [//]: # (Manual)
 
 ## Usage
@@ -61,7 +80,6 @@ Vifra.feedback([.strong, .weak, .delay(usec: 500_000), .strong])
 - macOS: You cannot enable the sandboxing entitlement; if you do you'll encounter the error -536870174 during `Vifra.setup()` which is internally being called from `Vifra.feedback()`.
 
 ## ToDo
-- Add SwiftPM support
 - Add Carthage support
 - Add iOS support
 - Add watchOS support
