@@ -102,7 +102,7 @@ $ git submodule add https://github.com/matis-schotte/Vifra.git
 - In the tab bar at the top of that window, open the "General" panel.
 - Click on the `+` button under the "Embedded Binaries" section.
 - You will see the `Vifra.framework` somewhere, just select the correct version.
-- And that's it!
+- And that's it, try `import Vifra`!
 
 ## Usage
 You can issue haptic feedback with just any of the following lines using any of the predefined enum values:
