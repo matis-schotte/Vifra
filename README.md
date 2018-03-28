@@ -15,7 +15,7 @@
 ![Ethereum](https://img.shields.io/badge/ethereum-0x25C93954ad65f1Bb5A1fd70Ec33f3b9fe72e5e58-yellowgreen.svg)
 ![Litecoin](https://img.shields.io/badge/litecoin-MPech47X9GjaatuV4sQsEzoMwGMxKzdXaH-lightgrey.svg)
 
-Vifra is a framework for macOS, iOS and watchOS that provides simplified access to the device actuator to provide haptic feedback through the taptic engine.
+Vifra is a framework for macOS, iOS and watchOS that provides simplified access to the device actuator to provide haptic feedback (vibration through the taptic engine).
 
 ## Requirements
 - macOS >= 10.12
@@ -81,7 +81,7 @@ Vifra.feedback([.strong, .weak, .delay(usec: 500_000), .strong])
 
 ## ToDo
 - Add Carthage support
-- Add iOS support
+- Add iOS support (AudioServicesPlaySystemSound(kSystemSoundID_Vibrate))
 - Add watchOS support
 
 [//]: # (Donations: ETH, XMR, BTC, LTC welcome.)
