@@ -81,8 +81,9 @@ Vifra.feedback([.strong, .weak, .delay(usec: 500_000), .strong])
 
 ## ToDo
 - Add Carthage support
-- Add iOS support (AudioServicesPlaySystemSound(kSystemSoundID_Vibrate))
-- Add watchOS support
+- Add iOS support (UIFeedbackGenerator and AudioServicesPlaySystemSound(kSystemSoundID_Vibrate))
+- Update macOS support (NSHapticFeedbackPerformer)
+- Add watchOS support (WKInterfaceDevice.current().play(.notification))
 
 [//]: # (Donations: ETH, XMR, BTC, LTC welcome.)
 
