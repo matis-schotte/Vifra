@@ -1,5 +1,5 @@
 //
-//  Vifra.swift
+//  Vifra+Vifrable.swift
 //  Vifra
 //
 //  Created by Matis Schotte on 02.03.18.

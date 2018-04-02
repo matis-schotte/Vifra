@@ -1,5 +1,5 @@
 //
-//  Vifra.swift
+//  Vifra+Vifrable.swift
 //  Vifra
 //
 //  Created by Matis Schotte on 30.03.18.
@@ -10,7 +10,7 @@ import WatchKit
 
 /// Vifra is a framework for macOS, iOS and WatchKit that provides simplified access
 /// to the device actuator to provide haptic feedback through the taptic engine.
-public extension Vifra {
+extension Vifra: Vifrable {
     /// Blocking call to play multiple haptics.
     ///
     /// - Parameter types: The types of haptic to play.
