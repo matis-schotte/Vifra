@@ -18,8 +18,9 @@
 Vifra is a framework for macOS, iOS and watchOS that provides simplified access to the device actuator to provide haptic feedback (vibration through the taptic engine).
 
 ## Requirements
-- macOS >= 10.12
 - Swift >= 4
+- macOS >= 10.12
+- watchOS >= 2.0
 
 ## Installation
 ### CocoaPods
@@ -33,10 +34,6 @@ $ gem install cocoapods
 To integrate Vifra into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :osx, '10.12'
-use_frameworks!
-
 pod 'Vifra'
 ```
 
@@ -83,9 +80,8 @@ Vifra.feedback([.strong, .weak, .delay(usec: 500_000), .strong])
 - Add Carthage support
 - Add iOS support (UIFeedbackGenerator and AudioServicesPlaySystemSound(kSystemSoundID_Vibrate))
 - Update macOS support (NSHapticFeedbackPerformer)
-- Add watchOS support (WKInterfaceDevice.current().play(.notification))
 
-[//]: # (Donations: ETH, XMR, BTC, LTC welcome.)
+[//]: # (Donations: ETH, LTC welcome.)
 
 ## License
 Vifra is available under the MIT license. See the [LICENSE](https://github.com/matis-schotte/Vifra/blob/develop/LICENSE) file for more info.
