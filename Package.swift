@@ -14,13 +14,17 @@ let package = Package(
     products: [
         .library(
             name: "Vifra",
-            targets: ["Vifra"]
+            targets: ["Vifra", "Vifra (watchOS)"]
         )
     ],
     targets: [
         .target(
             name: "Vifra",
             path: "Vifra"
+        ),
+        .target(
+            name: "Vifra (watchOS)",
+            path: "Vifra (watchOS)"
         ),
         .testTarget(
             name: "VifraTests",
