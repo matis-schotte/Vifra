@@ -119,11 +119,9 @@
 				CECE76B9205DD57800BC2585 /* LICENSE */,
 				CECE76BC2060386000BC2585 /* Package.swift */,
 				CECE76BD2060387F00BC2585 /* Vifra.podspec */,
-				CECE76CD2076A0E000BC2585 /* SharedSources */,
-				CE893B72204A047500BC1E21 /* Vifra */,
-				CECE76912054914800BC2585 /* VifraTests */,
-				CECE76AD205C83DE00BC2585 /* VifraExample */,
-				CECE76C42076915200BC2585 /* Vifra (watchOS) */,
+				CECE76CD2076A0E000BC2585 /* Sources */,
+				CECE76D120778A2800BC2585 /* Tests */,
+				CECE76D220778A4A00BC2585 /* Examples */,
 				CE893B84204A060200BC1E21 /* Frameworks */,
 				CE893B71204A047500BC1E21 /* Products */,
 			);
@@ -140,7 +138,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE893B72204A047500BC1E21 /* Vifra */ = {
+		CE893B72204A047500BC1E21 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
 				CE893B81204A04F400BC1E21 /* Vifra+Vifrable.swift */,
@@ -148,7 +146,7 @@
 				CE893B83204A054600BC1E21 /* Vifra-Bridging-Header.h */,
 				CE893B74204A047500BC1E21 /* Info.plist */,
 			);
-			path = Vifra;
+			path = macOS;
 			sourceTree = "<group>";
 		};
 		CE893B84204A060200BC1E21 /* Frameworks */ = {
@@ -159,7 +157,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CECE76912054914800BC2585 /* VifraTests */ = {
+		CECE76912054914800BC2585 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
 				CECE76A4205AF55D00BC2585 /* VifraTests.swift */,
@@ -167,32 +165,50 @@
 				CECE76A6205B2C6F00BC2585 /* ActuatorMock.swift */,
 				CECE76942054914800BC2585 /* Info.plist */,
 			);
-			path = VifraTests;
+			path = macOS;
 			sourceTree = "<group>";
 		};
-		CECE76AD205C83DE00BC2585 /* VifraExample */ = {
+		CECE76AD205C83DE00BC2585 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
 				CECE76AE205C83DE00BC2585 /* main.swift */,
 			);
-			path = VifraExample;
+			path = macOS;
 			sourceTree = "<group>";
 		};
-		CECE76C42076915200BC2585 /* Vifra (watchOS) */ = {
+		CECE76C42076915200BC2585 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
 				CECE76CB207694C000BC2585 /* Vifra+Vifrable.swift */,
 				CECE76C62076915200BC2585 /* Info.plist */,
 			);
-			path = "Vifra (watchOS)";
+			path = watchOS;
 			sourceTree = "<group>";
 		};
-		CECE76CD2076A0E000BC2585 /* SharedSources */ = {
+		CECE76CD2076A0E000BC2585 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				CECE76CE2076A21300BC2585 /* Vifra.swift */,
+				CE893B72204A047500BC1E21 /* macOS */,
+				CECE76C42076915200BC2585 /* watchOS */,
 			);
-			path = SharedSources;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CECE76D120778A2800BC2585 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CECE76912054914800BC2585 /* macOS */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		CECE76D220778A4A00BC2585 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				CECE76AD205C83DE00BC2585 /* macOS */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
