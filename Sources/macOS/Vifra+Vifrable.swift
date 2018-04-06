@@ -8,8 +8,6 @@
 
 import Foundation
 
-/// Vifra is a framework for macOS, iOS and WatchKit that provides simplified access
-/// to the device actuator to provide haptic feedback through the taptic engine.
 extension Vifra: Vifrable {
     /// Blocking call to play multiple haptics.
     ///

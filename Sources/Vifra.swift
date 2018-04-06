@@ -8,8 +8,7 @@
 
 import Foundation
 
-/// Vifra is a framework for macOS, iOS and WatchKit that provides simplified access
-/// to the device actuator to provide haptic feedback through the taptic engine.
+/// The main API declaring the different haptic types.
 public enum Vifra {
     /// A weak haptic.
     case weak
@@ -21,6 +20,7 @@ public enum Vifra {
     case delay(usec: UInt32)
 }
 
+/// The main API declaring the available methods.
 public protocol Vifrable {
     /// Blocking call to play a single haptic.
     ///
@@ -30,10 +30,13 @@ public protocol Vifrable {
     /// Blocking call to play multiple haptics.
     ///
     /// - Parameter types: The types of haptic to play.
-    static func feedback(_: [Vifra])
+    static func feedback(_ types: [Vifra])
 }
 
-public extension Vifrable {
+extension Vifrable {
+    /// Blocking call to play a single haptic.
+    ///
+    /// - Parameter type: The type of haptic to play.
     public static func feedback(_ type: Vifra) {
         feedback([type])
     }

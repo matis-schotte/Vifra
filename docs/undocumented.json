@@ -1,26 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/user/Desktop/Dev/Vifra/Sources/Vifra.swift",
-      "line": null,
-      "symbol": "Vifrable",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/user/Desktop/Dev/Vifra/Sources/Vifra.swift",
-      "line": 24,
-      "symbol": "Vifrable",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/user/Desktop/Dev/Vifra/Sources/Vifra.swift",
-      "line": 37,
-      "symbol": "Vifrable.feedback(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/user/Desktop/Dev/Vifra"
 }
