@@ -20,15 +20,15 @@ let package = Package(
     targets: [
         .target(
             name: "Vifra",
-            path: "Vifra"
+            sources: ["*.swift", "macOS/*"]
         ),
         .target(
             name: "Vifra (watchOS)",
-            path: "Vifra (watchOS)"
+            sources: ["*.swift", "watchOS/*"]
         ),
         .testTarget(
             name: "VifraTests",
-            path: "VifraTests",
+            path: "Tests/macOS",
             dependencies: ["Vifra"]
         )
     ]
