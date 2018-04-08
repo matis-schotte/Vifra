@@ -51,7 +51,7 @@ Once you have your Swift package set up, adding Vifra as a dependency is as easy
 
 ```swift
 dependencies: [
-.package(url: "https://github.com/matis-schotte/Vifra.git", from: "0.3.0")
+    .package(url: "https://github.com/matis-schotte/Vifra.git", from: "0.4.0")
 ]
 ```
 
