@@ -26,9 +26,9 @@ extension Vifra: Vifrable {
         case .weak:
             return .click
         case .medium:
-            return .notification
+            return .click
         case .strong:
-            return .failure
+            return .click
         case let .delay(usec):
             usleep(usec)
             return nil
