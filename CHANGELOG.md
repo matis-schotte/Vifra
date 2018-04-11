@@ -11,10 +11,12 @@ All notable changes to this project will be documented in this file.
 ---
 
 ## [0.4.0](https://github.com/matis-schotte/Vifra/releases/tag/0.4.0)
-Released on 2018-04-08.
+Released on 2018-04-14.
 
 #### Added
 - watchOS support.
+  - Added by [Matis Schotte](https://github.com/matis-schotte).
+- Carthage support.
   - Added by [Matis Schotte](https://github.com/matis-schotte).
 
 ## [0.3.0](https://github.com/matis-schotte/Vifra/releases/tag/0.3.0)
