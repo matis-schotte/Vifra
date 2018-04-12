@@ -23,6 +23,43 @@ Vifra is a framework for macOS, iOS and watchOS that provides simplified access 
 - watchOS >= 2.0
 
 ## Installation
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but Vifra does support its use on supported platforms.
+
+Once you have your Swift package set up, adding Vifra as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/matis-schotte/Vifra.git", from: "0.4.0")
+]
+```
+
+Do not forget to ensure that the deployment target is set to the correct version (e.g. macOS 10.12), and that all necessary Frameworks are linked (e.g. MultitouchSupport.framework). To avoid getting "undefined symbols" the Bridging header should be used. Possible build command could be:
+
+```bash
+$ swift build -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.12" -Xswiftc "-import-objc-header" -Xswiftc ".build/checkouts/Vifra.git-6919244937016367571/Vifra/Vifra-Bridging-Header.h" -Xlinker -F/System/Library/PrivateFrameworks -Xlinker -lMultitouchSupport && swift run
+```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate Vifra into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "matis-schotte/Vifra" ~> 0.4
+```
+
+Run `carthage update` to build the framework and drag the built `Vifra.framework` into your Xcode project.
+
 ### CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
@@ -42,26 +79,6 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
-
-### Swift Package Manager
-
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but Vifra does support its use on supported platforms.
-
-Once you have your Swift package set up, adding Vifra as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/matis-schotte/Vifra.git", from: "0.4.0")
-]
-```
-
-Do not forget to ensure that the deployment target is set to the correct version (e.g. macOS 10.12), and that all necessary Frameworks are linked (e.g. MultitouchSupport.framework). To avoid getting "undefined symbols" the Bridging header should be used. Possible build command could be:
-
-```bash
-$ swift build -Xswiftc "-target" -Xswiftc "x86_64-apple-macosx10.12" -Xswiftc "-import-objc-header" -Xswiftc ".build/checkouts/Vifra.git-6919244937016367571/Vifra/Vifra-Bridging-Header.h" -Xlinker -F/System/Library/PrivateFrameworks -Xlinker -lMultitouchSupport && swift run
-```
-
-[//]: # (Manual)
 
 ## Usage
 You can issue haptic feedback with just any of the following lines using any of the predefined enum values:
