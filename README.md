@@ -80,6 +80,30 @@ Then, run the following command:
 $ pod install
 ```
 
+### Manually
+
+If you prefer not to use any of the aforementioned dependency managers, you can integrate Vifra into your project manually.
+
+- Open up Terminal, `cd` into your top-level project directory, and run the following command "if" your project is not initialized as a git repository:
+
+```bash
+$ git init
+```
+
+- Add Vifra as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
+
+```bash
+$ git submodule add https://github.com/matis-schotte/Vifra.git
+```
+
+- Open the new `Vifra` folder, and drag the `Vifra.xcodeproj` into the Project Navigator of your application's Xcode project.
+- Select the `Vifra.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
+- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
+- In the tab bar at the top of that window, open the "General" panel.
+- Click on the `+` button under the "Embedded Binaries" section.
+- You will see the `Vifra.framework` somewhere, just select the correct version.
+- And that's it!
+
 ## Usage
 You can issue haptic feedback with just any of the following lines using any of the predefined enum values:
 ```swift
