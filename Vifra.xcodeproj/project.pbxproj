@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE893B82204A04F400BC1E21 /* Vifra.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE893B81204A04F400BC1E21 /* Vifra.swift */; };
+		CE893B82204A04F400BC1E21 /* Vifra+Vifrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE893B81204A04F400BC1E21 /* Vifra+Vifrable.swift */; };
 		CE893B85204A060200BC1E21 /* MultitouchSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE893B86204A060200BC1E21 /* MultitouchSupport.framework */; };
 		CECE76932054914800BC2585 /* ActuatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76922054914800BC2585 /* ActuatorTests.swift */; };
 		CECE76952054914800BC2585 /* Vifra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE893B70204A047500BC1E21 /* Vifra.framework */; };
@@ -17,6 +17,9 @@
 		CECE76AF205C83DE00BC2585 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76AE205C83DE00BC2585 /* main.swift */; };
 		CECE76B5205C83F900BC2585 /* Vifra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE893B70204A047500BC1E21 /* Vifra.framework */; };
 		CECE76BA205DD57800BC2585 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CECE76B9205DD57800BC2585 /* LICENSE */; };
+		CECE76CC2076968400BC2585 /* Vifra+Vifrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76CB207694C000BC2585 /* Vifra+Vifrable.swift */; };
+		CECE76CF2076A21600BC2585 /* Vifra.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76CE2076A21300BC2585 /* Vifra.swift */; };
+		CECE76D02076A21700BC2585 /* Vifra.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE76CE2076A21300BC2585 /* Vifra.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +54,7 @@
 /* Begin PBXFileReference section */
 		CE893B70204A047500BC1E21 /* Vifra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vifra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE893B74204A047500BC1E21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE893B81204A04F400BC1E21 /* Vifra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vifra.swift; sourceTree = "<group>"; };
+		CE893B81204A04F400BC1E21 /* Vifra+Vifrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vifra+Vifrable.swift"; sourceTree = "<group>"; };
 		CE893B83204A054600BC1E21 /* Vifra-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vifra-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE893B86204A060200BC1E21 /* MultitouchSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultitouchSupport.framework; path = /System/Library/PrivateFrameworks/MultitouchSupport.framework; sourceTree = "<absolute>"; };
 		CE893B97204A9F6200BC1E21 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -67,6 +70,10 @@
 		CECE76B9205DD57800BC2585 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CECE76BC2060386000BC2585 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		CECE76BD2060387F00BC2585 /* Vifra.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Vifra.podspec; sourceTree = "<group>"; };
+		CECE76C32076915200BC2585 /* Vifra__watchOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Vifra__watchOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECE76C62076915200BC2585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECE76CB207694C000BC2585 /* Vifra+Vifrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vifra+Vifrable.swift"; sourceTree = "<group>"; };
+		CECE76CE2076A21300BC2585 /* Vifra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vifra.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +101,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CECE76BF2076915200BC2585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -105,9 +119,9 @@
 				CECE76B9205DD57800BC2585 /* LICENSE */,
 				CECE76BC2060386000BC2585 /* Package.swift */,
 				CECE76BD2060387F00BC2585 /* Vifra.podspec */,
-				CE893B72204A047500BC1E21 /* Vifra */,
-				CECE76912054914800BC2585 /* VifraTests */,
-				CECE76AD205C83DE00BC2585 /* VifraExample */,
+				CECE76CD2076A0E000BC2585 /* Sources */,
+				CECE76D120778A2800BC2585 /* Tests */,
+				CECE76D220778A4A00BC2585 /* Examples */,
 				CE893B84204A060200BC1E21 /* Frameworks */,
 				CE893B71204A047500BC1E21 /* Products */,
 			);
@@ -119,19 +133,20 @@
 				CE893B70204A047500BC1E21 /* Vifra.framework */,
 				CECE76902054914800BC2585 /* VifraTests.xctest */,
 				CECE76AC205C83DD00BC2585 /* VifraExample */,
+				CECE76C32076915200BC2585 /* Vifra__watchOS_.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE893B72204A047500BC1E21 /* Vifra */ = {
+		CE893B72204A047500BC1E21 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				CE893B81204A04F400BC1E21 /* Vifra.swift */,
+				CE893B81204A04F400BC1E21 /* Vifra+Vifrable.swift */,
 				CECE76A120553ADD00BC2585 /* Actuator.swift */,
 				CE893B83204A054600BC1E21 /* Vifra-Bridging-Header.h */,
 				CE893B74204A047500BC1E21 /* Info.plist */,
 			);
-			path = Vifra;
+			path = macOS;
 			sourceTree = "<group>";
 		};
 		CE893B84204A060200BC1E21 /* Frameworks */ = {
@@ -142,7 +157,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CECE76912054914800BC2585 /* VifraTests */ = {
+		CECE76912054914800BC2585 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
 				CECE76A4205AF55D00BC2585 /* VifraTests.swift */,
@@ -150,21 +165,63 @@
 				CECE76A6205B2C6F00BC2585 /* ActuatorMock.swift */,
 				CECE76942054914800BC2585 /* Info.plist */,
 			);
-			path = VifraTests;
+			path = macOS;
 			sourceTree = "<group>";
 		};
-		CECE76AD205C83DE00BC2585 /* VifraExample */ = {
+		CECE76AD205C83DE00BC2585 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
 				CECE76AE205C83DE00BC2585 /* main.swift */,
 			);
-			path = VifraExample;
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		CECE76C42076915200BC2585 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				CECE76CB207694C000BC2585 /* Vifra+Vifrable.swift */,
+				CECE76C62076915200BC2585 /* Info.plist */,
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
+		CECE76CD2076A0E000BC2585 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CECE76CE2076A21300BC2585 /* Vifra.swift */,
+				CE893B72204A047500BC1E21 /* macOS */,
+				CECE76C42076915200BC2585 /* watchOS */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CECE76D120778A2800BC2585 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CECE76912054914800BC2585 /* macOS */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		CECE76D220778A4A00BC2585 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				CECE76AD205C83DE00BC2585 /* macOS */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
 		CE893B6D204A047500BC1E21 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECE76C02076915200BC2585 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -230,6 +287,24 @@
 			productReference = CECE76AC205C83DD00BC2585 /* VifraExample */;
 			productType = "com.apple.product-type.tool";
 		};
+		CECE76C22076915200BC2585 /* Vifra (watchOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECE76C82076915300BC2585 /* Build configuration list for PBXNativeTarget "Vifra (watchOS)" */;
+			buildPhases = (
+				CECE76BE2076915200BC2585 /* Sources */,
+				CECE76BF2076915200BC2585 /* Frameworks */,
+				CECE76C02076915200BC2585 /* Headers */,
+				CECE76C12076915200BC2585 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vifra (watchOS)";
+			productName = "Vifra (watchOS)";
+			productReference = CECE76C32076915200BC2585 /* Vifra__watchOS_.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -254,6 +329,10 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					CECE76C22076915200BC2585 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = CE893B6A204A047500BC1E21 /* Build configuration list for PBXProject "Vifra" */;
@@ -271,6 +350,7 @@
 				CE893B6F204A047500BC1E21 /* Vifra */,
 				CECE768F2054914800BC2585 /* VifraTests */,
 				CECE76AB205C83DD00BC2585 /* VifraExample */,
+				CECE76C22076915200BC2585 /* Vifra (watchOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -285,6 +365,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CECE768E2054914800BC2585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECE76C12076915200BC2585 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,7 +418,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECE76A220553ADD00BC2585 /* Actuator.swift in Sources */,
-				CE893B82204A04F400BC1E21 /* Vifra.swift in Sources */,
+				CECE76CF2076A21600BC2585 /* Vifra.swift in Sources */,
+				CE893B82204A04F400BC1E21 /* Vifra+Vifrable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +438,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECE76AF205C83DE00BC2585 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECE76BE2076915200BC2585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECE76D02076A21700BC2585 /* Vifra.swift in Sources */,
+				CECE76CC2076968400BC2585 /* Vifra+Vifrable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,13 +599,13 @@
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Vifra/Info.plist;
+				INFOPLIST_FILE = Sources/macOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ungeord.Vifra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Vifra/Vifra-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/macOS/Vifra-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
@@ -531,13 +628,13 @@
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Vifra/Info.plist;
+				INFOPLIST_FILE = Sources/macOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ungeord.Vifra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Vifra/Vifra-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/macOS/Vifra-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -550,7 +647,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = VifraTests/Info.plist;
+				INFOPLIST_FILE = Tests/macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ungeord.VifraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -568,7 +665,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = VifraTests/Info.plist;
+				INFOPLIST_FILE = Tests/macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ungeord.VifraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -600,6 +697,57 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		CECE76C92076915300BC2585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 842T2737KX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/watchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ungeord.Vifra--watchOS-";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		CECE76CA2076915300BC2585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 842T2737KX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/watchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.ungeord.Vifra--watchOS-";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
 			name = Release;
 		};
@@ -638,6 +786,15 @@
 			buildConfigurations = (
 				CECE76B1205C83DE00BC2585 /* Debug */,
 				CECE76B2205C83DE00BC2585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECE76C82076915300BC2585 /* Build configuration list for PBXNativeTarget "Vifra (watchOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECE76C92076915300BC2585 /* Debug */,
+				CECE76CA2076915300BC2585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -36,6 +36,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Vifrable.html">Vifrable</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -63,10 +71,38 @@
 <h2 id='requirements' class='heading'>Requirements</h2>
 
 <ul>
-<li>macOS &gt;= 10.12</li>
 <li>Swift &gt;= 4</li>
+<li>macOS &gt;= 10.12</li>
+<li>watchOS &gt;= 2.0</li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>The <a href="https://swift.org/package-manager/">Swift Package Manager</a> is a tool for automating the distribution of Swift code and is integrated into the <code>swift</code> compiler. It is in early development, but Vifra does support its use on supported platforms.</p>
+
+<p>Once you have your Swift package set up, adding Vifra as a dependency is as easy as adding it to the <code>dependencies</code> value of your <code>Package.swift</code>.</p>
+<pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/matis-schotte/Vifra.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.4.0"</span><span class="p">)</span>
+<span class="p">]</span>
+</code></pre>
+
+<p>Do not forget to ensure that the deployment target is set to the correct version (e.g. macOS 10.12), and that all necessary Frameworks are linked (e.g. MultitouchSupport.framework). To avoid getting <q>undefined symbols</q> the Bridging header should be used. Possible build command could be:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>swift build -Xswiftc <span class="s2">"-target"</span> -Xswiftc <span class="s2">"x86_64-apple-macosx10.12"</span> -Xswiftc <span class="s2">"-import-objc-header"</span> -Xswiftc <span class="s2">".build/checkouts/Vifra.git-6919244937016367571/Vifra/Vifra-Bridging-Header.h"</span> -Xlinker -F/System/Library/PrivateFrameworks -Xlinker -lMultitouchSupport <span class="o">&amp;&amp;</span> swift run
+</code></pre>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
+
+<p>You can install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>brew update
+<span class="gp">$ </span>brew install carthage
+</code></pre>
+
+<p>To integrate Vifra into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "matis-schotte/Vifra" ~&gt; 0.4
+</code></pre>
+
+<p>Run <code>carthage update</code> to build the framework and drag the built <code>Vifra.framework</code> into your Xcode project.</p>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:</p>
@@ -74,29 +110,37 @@
 </code></pre>
 
 <p>To integrate Vifra into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
-<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
-<span class="n">platform</span> <span class="ss">:osx</span><span class="p">,</span> <span class="s1">'10.12'</span>
-<span class="n">use_frameworks!</span>
-
-<span class="n">pod</span> <span class="s1">'Vifra'</span>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Vifra'</span>
 </code></pre>
 
 <p>Then, run the following command:</p>
 <pre class="highlight shell"><code><span class="gp">$ </span>pod install
 </code></pre>
-<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+<h3 id='manually' class='heading'>Manually</h3>
 
-<p>The <a href="https://swift.org/package-manager/">Swift Package Manager</a> is a tool for automating the distribution of Swift code and is integrated into the <code>swift</code> compiler. It is in early development, but Vifra does support its use on supported platforms.</p>
+<p>If you prefer not to use any of the aforementioned dependency managers, you can integrate Vifra into your project manually.</p>
 
-<p>Once you have your Swift package set up, adding Vifra as a dependency is as easy as adding it to the <code>dependencies</code> value of your <code>Package.swift</code>.</p>
-<pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-<span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/matis-schotte/Vifra.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.3.0"</span><span class="p">)</span>
-<span class="p">]</span>
+<ul>
+<li>Open up Terminal, <code>cd</code> into your top-level project directory, and run the following command <q>if</q> your project is not initialized as a git repository:</li>
+</ul>
+<pre class="highlight shell"><code><span class="gp">$ </span>git init
 </code></pre>
 
-<p>Do not forget to ensure that the deployment target is set to the correct version (e.g. macOS 10.12), and that all necessary Frameworks are linked (e.g. MultitouchSupport.framework). To avoid getting <q>undefined symbols</q> the Bridging header should be used. Possible build command could be:</p>
-<pre class="highlight shell"><code><span class="gp">$ </span>swift build -Xswiftc <span class="s2">"-target"</span> -Xswiftc <span class="s2">"x86_64-apple-macosx10.12"</span> -Xswiftc <span class="s2">"-import-objc-header"</span> -Xswiftc <span class="s2">".build/checkouts/Vifra.git-6919244937016367571/Vifra/Vifra-Bridging-Header.h"</span> -Xlinker -F/System/Library/PrivateFrameworks -Xlinker -lMultitouchSupport <span class="o">&amp;&amp;</span> swift run
+<ul>
+<li>Add Vifra as a git <a href="http://git-scm.com/docs/git-submodule">submodule</a> by running the following command:</li>
+</ul>
+<pre class="highlight shell"><code><span class="gp">$ </span>git submodule add https://github.com/matis-schotte/Vifra.git
 </code></pre>
+
+<ul>
+<li>Open the new <code><a href="Enums/Vifra.html">Vifra</a></code> folder, and drag the <code>Vifra.xcodeproj</code> into the Project Navigator of your application&rsquo;s Xcode project.</li>
+<li>Select the <code>Vifra.xcodeproj</code> in the Project Navigator and verify the deployment target matches that of your application target.</li>
+<li>Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the <q>Targets</q> heading in the sidebar.</li>
+<li>In the tab bar at the top of that window, open the <q>General</q> panel.</li>
+<li>Click on the <code>+</code> button under the <q>Embedded Binaries</q> section.</li>
+<li>You will see the <code>Vifra.framework</code> somewhere, just select the correct version.</li>
+<li>And that&rsquo;s it!</li>
+</ul>
 <h2 id='usage' class='heading'>Usage</h2>
 
 <p>You can issue haptic feedback with just any of the following lines using any of the predefined enum values:</p>
@@ -115,7 +159,6 @@
 <li>Add Carthage support</li>
 <li>Add iOS support (UIFeedbackGenerator and AudioServicesPlaySystemSound(kSystemSoundID_Vibrate))</li>
 <li>Update macOS support (NSHapticFeedbackPerformer)</li>
-<li>Add watchOS support (WKInterfaceDevice.current().play(.notification))</li>
 </ul>
 <h2 id='license' class='heading'>License</h2>
 
@@ -129,7 +172,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://ungeord.net" target="_blank" rel="external">Matis Schotte</a>. All rights reserved. (Last updated: 2018-03-29)</p>
+          <p>&copy; 2018 <a class="link" href="https://ungeord.net" target="_blank" rel="external">Matis Schotte</a>. All rights reserved. (Last updated: 2018-04-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

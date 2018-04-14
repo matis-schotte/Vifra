@@ -14,17 +14,21 @@ let package = Package(
     products: [
         .library(
             name: "Vifra",
-            targets: ["Vifra"]
+            targets: ["Vifra", "Vifra (watchOS)"]
         )
     ],
     targets: [
         .target(
             name: "Vifra",
-            path: "Vifra"
+            sources: ["*.swift", "macOS/*"]
+        ),
+        .target(
+            name: "Vifra (watchOS)",
+            sources: ["*.swift", "watchOS/*"]
         ),
         .testTarget(
             name: "VifraTests",
-            path: "VifraTests",
+            path: "Tests/macOS",
             dependencies: ["Vifra"]
         )
     ]
