@@ -16,7 +16,7 @@ Released on 2018-04-14.
 #### Added
 - watchOS support.
   - Added by [Matis Schotte](https://github.com/matis-schotte).
-- Carthage support.
+- Carthage support and Manual Installation.
   - Added by [Matis Schotte](https://github.com/matis-schotte).
 
 ## [0.3.0](https://github.com/matis-schotte/Vifra/releases/tag/0.3.0)
